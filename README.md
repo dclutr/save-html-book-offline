@@ -31,7 +31,7 @@ depending on height given the following happens
 2 => and download pages linked on b1.html and b2.html i.e c.html
 ```
 
-# Some gotchas
+## Some gotchas
 - All files are stored in the same directory as follows: File available at https://abc.com/s1/s2/a.png is saved and linked to as abc.com.s1.s2.a.png
 - The start page is saved once more as index.html, so that it is opened by default when going into the book directory
 - Cross domain pages are ignored
