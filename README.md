@@ -52,8 +52,8 @@ depending on height given the following happens
 - Cross domain pages are ignored
 
 ## Have I used this script?
-Yes. Many times I could not find downloadable version of some html documntation / html book, so this helped. For example, Nettle, GNU Ease.js, GNU FisicaLab, How to Design Programs
+Yes. Many times I could not find downloadable version of some html documentation / html book, so this helped. For example, Nettle, GNU Ease.js, GNU FisicaLab, How to Design Programs
 
-I used this script to get a copy of the Second edition of Structure and Interpretation of Computer Programs from the MIT site before it was not available, so that was pretty neat. Still have to read the book though. Wikipedia mentioned How to Design Programs as a more accessible book, might try reading that first
+I used this script to get a copy of the Second edition of Structure and Interpretation of Computer Programs from the MIT site before it was not available, so that was pretty neat. Still have to read the book though. Wikipedia mentioned How to Design Programs as a more accessible book, might try reading that first. Love the syntax highlighting in that book
 
 
