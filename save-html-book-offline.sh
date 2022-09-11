@@ -273,7 +273,7 @@ else
     "$( slashes-to-dots "$( remove-scheme "$download_url" )" )"
   do
     echo "$html" > "$file"
-    add-to-history "$height#$file#$download_url"
+    add-to-history "$height" "$file" "$download_url"
   done
   while pop # pops height download_url download_target
   do   
