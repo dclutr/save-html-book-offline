@@ -234,7 +234,7 @@ else
   for file in "index.html" "$( slashes-to-dots "$( remove-scheme "$download_url" )" )"
   do
     echo "$html" > "$file"
-    echo "$height $file $download_url " > ".history"
+    echo "$download_url#$height" > ".history"
   done
   while pop # pops height download_url download_target
   do   
