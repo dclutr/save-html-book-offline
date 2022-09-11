@@ -23,7 +23,7 @@ wget https://www.gnu.org/software/guile/manual/guile.html_node.tar.gz
 gunzip guile.html_node.tar.gz
 tar -xf guile.html_node.tar
 ```
-This will unpack all files to the current directory, which can get messy you did not want to mix these files with other files
+This will unpack all files to the current directory, which can get messy if you did not want to mix these files with other files
 
 ## Input parameters
 - `url` : 
