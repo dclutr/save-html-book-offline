@@ -27,16 +27,18 @@ function parse-links()
     # attribute="value (or) attribute=value
     for match in $( echo "$html" | grep -o -i \
 "$attribute=[\"][^\"]*[\"]
-$attribute=[^\"][^> ]*"
+$attribute=[\'][^\']*[\']
+$attribute=[^\"\'][^> ]*"
     )
     do
       echo "found $match"
       url="$( unquote "$( trim-left "$match" "$(("${#attribute}"+1))" )" )"
       case "$url" in
-        "#"*)          continue;; # fragment-only URLs require no further action
+        "mailto:"*)    continue;; # ignore mailto URL
+        "#"*)          continue;; # ignore fragment-only URL
         *"//$DOMAIN")  url="$url/index.html";;
         "//$DOMAIN/"*) url="$( index-if-dir "$url" )";;
-        *"//"*)        continue;; # cross domain URLs are out of scope of this program
+        *"//"*)        continue;; # ignore cross domain URL
         "/"*)          url="$( index-if-dir "http://$DOMAIN$url" )";;
         "../"*)        url="$( index-if-dir "$( url-for-outer-dir "$url" "$download_url" )" )";;
         "./"*)         url="$( index-if-dir "$( url-for-same-dir "${url:2}" "$download_url" )" )";;
@@ -178,6 +180,7 @@ function unquote()
 {
   case "$1" in
     \"*\") echo "${1:1:-1}";;
+    \'*\') echo "${1:1:-1}";;
     *)     echo "$1";;
   esac
 }
